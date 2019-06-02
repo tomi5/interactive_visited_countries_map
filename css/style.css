@@ -1,0 +1,299 @@
+/*
+	===========================
+	GLOBAL SETTINGS
+	===========================
+*/
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: #e2e2dd;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.wrapper {
+    padding-top: 60px;
+    width: 100%
+}
+
+/*
+	===========================
+	HEADER SECTION
+	===========================
+*/
+
+.header__main-heading {
+    margin: 0;
+    padding: 10px 20px;
+    display: block;
+    line-height: 1.2;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px #fff;
+}
+
+.header__btn {
+    padding: 5px 10px;
+    width: 250px;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header__btn--active {
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    transition: .3s;
+}
+
+.instr {
+    display: block;
+    margin: 5px 20px;
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px #9f9f9f;
+    transition: .3s ease-out;
+}
+
+.instr__item {
+    padding: 5px;
+    text-align: justify;
+    list-style: square inside;
+}
+
+.container--counter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #908d89;
+    box-shadow: 0px 0px 9px #9f9f9f;
+    z-index: 9999;
+}
+
+.counter__heading {
+    display: block;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+.counter__number,
+.counter__percent {
+    color: black;
+}
+
+/*
+	===========================
+	MAP SECTION
+	===========================
+*/
+
+.container--map {
+    margin-bottom: 15px;
+}
+
+.svg__map {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.svg__map path {
+    cursor: pointer;
+}
+
+.svg__map path:hover {
+    fill: #b6b6b6 !important
+}
+
+/* tooltip */
+.tooltip {
+    position: absolute;
+    display: inline-block;
+}
+
+.tooltip__text {
+    background-color: rgb(82, 80, 80);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: .2s;
+}
+
+/* search box */
+
+.search-country {
+    width: 100%;
+    position: relative;
+}
+
+.search-country__input {
+    width: 70%;
+    padding: 2px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 6px;
+    z-index: 999;
+}
+
+.search-country__list {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    padding: 0 10px;
+}
+
+.list__country {
+    display: none;
+    /* display flex with JS */
+    margin: 10px 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.list__country:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 3px #363533;
+}
+
+.list__country:active {
+    box-shadow: inset 0px 0px 4px 1px #9c9c9c;
+}
+
+.country-flag {
+    order: -1;
+    padding: 0 10px;
+    height: 30px;
+    width: auto;
+    z-index: -1
+}
+
+/*
+	===========================
+	TABLE SECTION
+	===========================
+*/
+
+.container--table {
+    width: 100%;
+    align-items: stretch;
+}
+
+.container__continent {
+    border-top: 2px solid black;
+    padding: 0 15px;
+}
+
+.container__continent:last-child {
+    border-bottom: 2px solid black;
+}
+
+.continent__heading {
+    margin: 0 10px 5px;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+.visited {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+/* class adding by js */
+.visited__country {
+    flex-basis: 47%;
+    flex-flow: row nowrap;
+    margin: 5px 0;
+    justify-content: space-between
+}
+
+.visited__country .country-flag {
+    padding: 0;
+}
+
+.remove {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* make a icon trash not clickable */
+.fa-trash-alt {
+    position: relative;
+    z-index: -1;
+}
+
+/*
+	===========================
+	FOOTER SECTION
+	===========================
+*/
+
+.footer {
+    padding: 20px 0;
+    color: #fff;
+    background-color: #908d89;
+}
+
+.footer__link {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer
+}
