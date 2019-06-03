@@ -1452,7 +1452,6 @@ const removeCountry = (e) => {
 		}
 	}
 
-
 	// render visited lists 
 	visitedAfrica.forEach((country, index) => {
 		country.name === txt ? visitedAfrica.splice(index, 1) : false;
@@ -1477,7 +1476,6 @@ const removeCountry = (e) => {
 	showNumberOfVisisted() // update the number of visited countries in HTML
 }
 
-
 function changeColor(index, color) {
 	if (index >= 0) {
 		paths[index].style.fill = color
@@ -1487,27 +1485,31 @@ function changeColor(index, color) {
 }
 
 allCountriesLi.forEach(li => li.addEventListener('click', addToVisited));
-searchCountry.addEventListener('input', searchTask)
+searchCountry.addEventListener('input', searchTask);
+paths.forEach(path => path.addEventListener("click", addToVisited));
 
-paths.forEach(path => path.addEventListener("click", addToVisited))
 
+//TOOLTIP - show country name on map - only on min-widht 800px
 
-//TOOLTIP - show country name on map
-const tooltip = document.querySelector(".tooltip__text");
+const tooltip = document.querySelector(".tooltip");
+const tooltipTxt = document.querySelector(".tooltip__text");
 const showCountryName = (e) => {
-	tooltip.classList.remove('hidden')
-	tooltip.textContent = e.target.dataset.name;
-	let svgHeight = svg.clientHeight;
+	if (window.innerWidth > 800) {
+		tooltip.classList.remove('hidden')
+		tooltipTxt.textContent = e.target.dataset.name;
 
-	let x = e.clientX;
-	let y = e.offsetY;
+		let x = e.clientX;
+		let y = e.offsetY;
 
-	tooltip.style.top = `${y - svgHeight + 10}px`;
-	tooltip.style.left = `${x}px`;
+		tooltip.style.top = `${y+ 10}px`;
+		tooltip.style.left = `${x + 10}px`;
+	}
 }
 
-//show tooltip when mouse is on country path
+//show tooltip when mouse is on country path 
+
 paths.forEach(path => path.addEventListener("mousemove", showCountryName))
+
 
 //hide tooltip when mouse isn't on country path
 svg.addEventListener("mouseover", function () {

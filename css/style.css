@@ -144,8 +144,14 @@ body {
 }
 
 /* tooltip */
+.container--svg {
+    position: relative;
+}
+
 .tooltip {
     position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
 }
 
@@ -155,7 +161,6 @@ body {
     text-align: center;
     padding: 5px 10px;
     border-radius: 6px;
-    position: relative;
     z-index: 1;
 }
 
