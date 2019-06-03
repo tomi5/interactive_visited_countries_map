@@ -1374,7 +1374,7 @@ const addToVisited = (e) => {
 		const visitedDetails = {
 			name: e.target.dataset.name,
 			id: e.target.dataset.id,
-			flag: `<img src="flag\/${e.target.dataset.id}.png" class="country-flag" alt="country-flag">`
+			flag: `<img src="flag\/${countryLi.dataset.id}.png" class="country-flag" alt="country-flag">`
 		}
 
 		//check the continent of selected country and push to relevant array of visited countries by continent
