@@ -1489,12 +1489,12 @@ searchCountry.addEventListener('input', searchTask);
 paths.forEach(path => path.addEventListener("click", addToVisited));
 
 
-//TOOLTIP - show country name on map - only on min-widht 800px
+//TOOLTIP - show country name on map - only on min-widht 960px
 
 const tooltip = document.querySelector(".tooltip");
 const tooltipTxt = document.querySelector(".tooltip__text");
 const showCountryName = (e) => {
-	if (window.innerWidth > 800) {
+	if (window.innerWidth > 960) {
 		tooltip.classList.remove('hidden')
 		tooltipTxt.textContent = e.target.dataset.name;
 
