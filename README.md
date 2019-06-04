@@ -1,19 +1,21 @@
-# Interactive Visited Countries Map - educational project
+# Interactive Visited Countries Map
 
 
 
-## Training project to practice JavaScript
+## First training project to practice JavaScript
 
 
 
 ###### Tech Work used:
-- javaScript
+- JavaScript
 - HTML5
 - pure CSS3
 - FLEXBOX
 
-LIVE: https://tomi5.github.io/cuda_single_pages/
+#### NOTE: saving map will be available when my backend development skills improve. 
 
-###### svg map source: https://graphicburger.com/cuda-single-page-portfolio-template/
-###### array with countries data source: https://graphicburger.com/cuda-single-page-portfolio-template/
-###### flags of countries source:
+
+LIVE: https://tomi5.github.io/interactive_visited_countries_map/
+
+###### svg map created by Simplemaps.com - MIT LICENCE - source: http://simplemaps.com 
+###### array with countries data source: https://css-tricks.com/snippets/javascript/array-of-country-names/
