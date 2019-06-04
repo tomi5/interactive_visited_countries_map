@@ -1498,11 +1498,13 @@ const showCountryName = (e) => {
 		tooltip.classList.remove('hidden')
 		tooltipTxt.textContent = e.target.dataset.name;
 
+		const windowWidth = window.innerWidth;
+		const mapWidth = document.querySelector(".container--svg").clientWidth
 		let x = e.clientX;
 		let y = e.offsetY;
 
 		tooltip.style.top = `${y+ 10}px`;
-		tooltip.style.left = `${x + 10}px`;
+		tooltip.style.left = `${x+ 20 -((windowWidth - mapWidth)/2)}px`;
 	}
 }
 
