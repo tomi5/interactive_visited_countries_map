@@ -1337,7 +1337,7 @@ const addToVisited = (e) => {
 		const addCountryToTable = (country) => {
 			const countryLi = document.createElement('li');
 			ul.appendChild(countryLi);
-			countryLi.innerHTML = country.flag + country.name + `<button class="remove" aria-label="remove country"><span class="fas fa-trash-alt" aria-hidden="true"></span></button>`;
+			countryLi.innerHTML = country.flag + country.name + `<button class="remove" aria-label="remove country"><span class="icon icon-bin" aria-hidden="true"></span></button>`;
 			countryLi.classList.add("visited__country", "flex");
 			countryLi.dataset.id = country.id
 			countryLi.dataset.name = country.name
