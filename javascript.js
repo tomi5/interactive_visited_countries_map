@@ -1,41 +1,30 @@
 // --declaration of global variables START
 
-const searchCountry = document.querySelector('.search-country__input')
-const ulAllCountries = document.querySelector('.search-country__list')
-const numberCountries = document.querySelector('.counter__number')
-const percentCountries = document.querySelector('.counter__percent')
-const africaCounter = document.querySelector('.counter--africa')
-const americaNCounter = document.querySelector('.counter--americaN')
-const americaSCounter = document.querySelector('.counter--americaS')
-const asiaCounter = document.querySelector('.counter--asia')
-const europeCounter = document.querySelector('.counter--europe')
-const oceaniaCounter = document.querySelector('.counter--oceania')
+const searchCountry = document.querySelector('.search-country__input'), 
+ulAllCountries = document.querySelector('.search-country__list'),
+numberCountries = document.querySelector('.counter__number'),
+percentCountries = document.querySelector('.counter__percent'),
+africaCounter = document.querySelector('.counter--africa'),
+americaNCounter = document.querySelector('.counter--americaN'),
+americaSCounter = document.querySelector('.counter--americaS'),
+asiaCounter = document.querySelector('.counter--asia'),
+europeCounter = document.querySelector('.counter--europe'),
+oceaniaCounter = document.querySelector('.counter--oceania');
 
 
 const svg = document.getElementById('map');
 const paths = svg.querySelectorAll('path')
 
 
-let colorVisited = "#68f442"
-let colorUnvisited = "#f2f2f2"
+const colorVisited = "#68f442"
+const colorUnvisited = "#f2f2f2"
 
 
 // declare continents code
-const af = "africa";
-const amN = "americaN";
-const amS = "americaS";
-const asi = "asia";
-const eu = "europe";
-const oa = "oceaniaAntarctica"
+const af = "africa",amN = "americaN",amS = "americaS",asi = "asia",eu = "europe",oa = "oceaniaAntarctica";
 
 // declare visited country arrays 
-const visitedCountries = [];
-const visitedAfrica = [];
-const visitedAmericaN = [];
-const visitedAmericaS = [];
-const visitedAsia = [];
-const visitedEurope = [];
-const visitedOceaniaAntarctica = [];
+const visitedCountries = [], visitedAfrica = [], visitedAmericaN = [], visitedAmericaS = [], visitedAsia = [],visitedEurope = [], visitedOceaniaAntarctica = [];
 
 // -- declaration of global variables END
 
