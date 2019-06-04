@@ -1287,6 +1287,7 @@ const allCountriesLi = document.querySelectorAll('.list__country')
 
 // search box 
 const searchTask = (e) => {
+		
 	const searchText = e.target.value.toLowerCase();
 	if (searchText === "") {
 		for (li of allCountriesLi) {
@@ -1475,6 +1476,16 @@ function changeColor(index, color) {
 
 allCountriesLi.forEach(li => li.addEventListener('click', addToVisited));
 searchCountry.addEventListener('input', searchTask);
+
+//stop reloading page with 'Enter Key'//
+searchCountry.addEventListener('keypress', function(e) {
+       if ((e.keyCode || e.which) == 13) {
+    e.preventDefault();
+    return false;
+  }
+    });
+
+	
 paths.forEach(path => path.addEventListener("click", addToVisited));
 
 
