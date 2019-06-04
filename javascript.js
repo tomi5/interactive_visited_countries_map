@@ -1,15 +1,15 @@
 // --declaration of global variables START
 
-const searchCountry = document.querySelector('.search-country__input'), 
-ulAllCountries = document.querySelector('.search-country__list'),
-numberCountries = document.querySelector('.counter__number'),
-percentCountries = document.querySelector('.counter__percent'),
-africaCounter = document.querySelector('.counter--africa'),
-americaNCounter = document.querySelector('.counter--americaN'),
-americaSCounter = document.querySelector('.counter--americaS'),
-asiaCounter = document.querySelector('.counter--asia'),
-europeCounter = document.querySelector('.counter--europe'),
-oceaniaCounter = document.querySelector('.counter--oceania');
+const searchCountry = document.querySelector('.search-country__input'),
+	ulAllCountries = document.querySelector('.search-country__list'),
+	numberCountries = document.querySelector('.counter__number'),
+	percentCountries = document.querySelector('.counter__percent'),
+	africaCounter = document.querySelector('.counter--africa'),
+	americaNCounter = document.querySelector('.counter--americaN'),
+	americaSCounter = document.querySelector('.counter--americaS'),
+	asiaCounter = document.querySelector('.counter--asia'),
+	europeCounter = document.querySelector('.counter--europe'),
+	oceaniaCounter = document.querySelector('.counter--oceania');
 
 
 const svg = document.getElementById('map');
@@ -21,10 +21,21 @@ const colorUnvisited = "#f2f2f2"
 
 
 // declare continents code
-const af = "africa",amN = "americaN",amS = "americaS",asi = "asia",eu = "europe",oa = "oceaniaAntarctica";
+const af = "africa",
+	amN = "americaN",
+	amS = "americaS",
+	asi = "asia",
+	eu = "europe",
+	oa = "oceaniaAntarctica";
 
 // declare visited country arrays 
-const visitedCountries = [], visitedAfrica = [], visitedAmericaN = [], visitedAmericaS = [], visitedAsia = [],visitedEurope = [], visitedOceaniaAntarctica = [];
+const visitedCountries = [],
+	visitedAfrica = [],
+	visitedAmericaN = [],
+	visitedAmericaS = [],
+	visitedAsia = [],
+	visitedEurope = [],
+	visitedOceaniaAntarctica = [];
 
 // -- declaration of global variables END
 
@@ -1272,12 +1283,9 @@ allCountriesList.forEach(country => {
 	countryLi.dataset.name = country.name
 	countryLi.dataset.continent = country.continent
 	countryLi.innerHTML = country.name + `<img src="flag\/${countryLi.dataset.id.toLowerCase()}.png" class="country-flag" alt="country-flag">`
-})
-
-//Add data-continent to country on map
-allCountriesList.forEach(item1 => {
+	//Add data-continent to country on map
 	paths.forEach(item2 => {
-		if (item1.code === item2.id) item2.dataset.continent = item1.continent
+		if (country.code === item2.id) item2.dataset.continent = country.continent
 	})
 })
 
@@ -1287,7 +1295,7 @@ const allCountriesLi = document.querySelectorAll('.list__country')
 
 // search box 
 const searchTask = (e) => {
-		
+
 	const searchText = e.target.value.toLowerCase();
 	if (searchText === "") {
 		for (li of allCountriesLi) {
@@ -1478,14 +1486,14 @@ allCountriesLi.forEach(li => li.addEventListener('click', addToVisited));
 searchCountry.addEventListener('input', searchTask);
 
 //stop reloading page with 'Enter Key'//
-searchCountry.addEventListener('keypress', function(e) {
-       if ((e.keyCode || e.which) == 13) {
-    e.preventDefault();
-    return false;
-  }
-    });
+searchCountry.addEventListener('keypress', function (e) {
+	if ((e.keyCode || e.which) == 13) {
+		e.preventDefault();
+		return false;
+	}
+});
 
-	
+
 paths.forEach(path => path.addEventListener("click", addToVisited));
 
 
