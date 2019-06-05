@@ -1316,10 +1316,19 @@ const searchTask = (e) => {
 
 // START - add selected country to visited list
 const addToVisited = (e) => {
-	// check if selected country has already added
+	// check if selected country has already added => if yes show popup
 	if (
 		visitedCountries.some(country => country.name === e.target.dataset.name)) {
-		alert(`${e.target.dataset.name} is already added to visited`)
+		const popup = document.querySelector('.overlay');
+		document.querySelector('.content__country').textContent = e.target.dataset.name;
+		popup.classList.toggle("active");
+		const closePopup = (e) => {
+			if (e.target !== e.currentTarget) return;
+		    popup.classList.remove("active")
+		}
+		document.querySelector('.popup__close').addEventListener('click', closePopup)	
+		popup.addEventListener('click', closePopup)	
+		
 	} else {
 		// when selected country hasn't allready added to visisted
 		if (e.target !== e.currentTarget) return;
