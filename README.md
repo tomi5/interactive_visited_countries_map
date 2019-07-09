@@ -1,4 +1,4 @@
-# Interactive Visited Countries Map
+# Interactive Map of Visited Countries
 
 
 
