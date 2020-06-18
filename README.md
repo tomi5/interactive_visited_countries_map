@@ -2,7 +2,7 @@
 
 
 
-## First training project to practice JavaScript
+## My very first training project to practice JavaScript
 
 
 
