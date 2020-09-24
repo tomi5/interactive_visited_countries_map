@@ -1,12 +1,10 @@
 # Interactive Map of Visited Countries
 
+My very first training project to practice JavaScript
 
+## Refactored project made with React.js and TypeScript: https://github.com/tomi5/visited-countries-map
 
-## My very first training project to practice JavaScript
-
-
-
-###### Tech Work used:
+### Tech Work used:
 - JavaScript
 - HTML5
 - pure CSS3
