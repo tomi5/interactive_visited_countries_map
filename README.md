@@ -2,7 +2,7 @@
 
 My very first training project to practice JavaScript
 
-### _Refactored project made with React.js and TypeScript: https://github.com/tomi5/visited-countries-map _
+_Refactored project made with React.js and TypeScript: https://github.com/tomi5/visited-countries-map _
 
 ### Tech Work used:
 - JavaScript
